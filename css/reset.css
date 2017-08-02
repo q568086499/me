@@ -1,0 +1,16 @@
+/*css reset*/
+@charset "utf-8";
+*{margin:0; padding:0; list-style:none; }
+body {font: 12px/1.5 "Microsoft YaHei";color:#4d4d4d;}
+div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,blockquote,p{padding:0; margin:0;}
+table,td,tr,th{font-size:12px;}
+ol,ul {list-style:none;}
+li{list-style-type:none;}
+img{vertical-align:top;border:0;}
+h1,h2,h3,h4,h5,h6{font-size:inherit; font-weight:normal;}
+address,cite,code,em,th,i{font-weight:normal; font-style:normal;}
+.hx a,.hx em,.fB{font-weight:bold;}
+a {color: #333; text-decoration:none; outline: 0;}
+a:visited {text-decoration:none;}
+a:hover {color:#e51b46; text-decoration:none;}
+a:active {color:#e51b46;}

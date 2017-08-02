@@ -2,9 +2,100 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="keywords" content="段骁桐,1326,前端,duanxiaotong,qianduan" />
+	<meta name="description" content="This page is about front-end engineer." />
 	<title>I1326</title>
+	<link rel="shortcut icon" href="img/favicon.ico">
+	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="css/reset.css">
+	<style>
+		.bagbody{
+			margin-left: -600px;
+			left: 50%;
+			bottom: 0;
+			position: absolute;
+			width: 1200px;
+			height: 600px;
+		    background: url('img/bagbg.png') repeat;
+		    box-shadow: 10px 10px 5px #333;
+		}
+		.bagbody:hover{
+			animation:anima 2s infinite;
+			transform: rotateY(180deg);
+			transition:all 2s;
+		}
+		.bagtxt{
+			margin-top: 100px;
+		}
+		.bagtxt p{
+			margin-left: 300px;
+			font-size: 98px;
+			font-family: "Microsoft Yahei";
+			color: rgb(255,22,22);
+		}
+		.bagtxt b:last-child{
+			float: right;
+			margin-right: 300px;
+		}
+		.baghead{
+			margin-top: -200px;
+		}
+		.top{
+			width: 100%;
+			height: 200px;
+		}
+		.down{
+			width: 100%;
+			height: 200px;
+			background: url('img/bagbg.png') repeat;
+			border-top: 1px solid rgb(150,100,79);
+			border-bottom: 1px solid rgb(150,100,79);
+		}
+		@keyframes anima{
+			0%{ box-shadow: 10px 10px 5px #333;}
+			50%{ box-shadow: none;}
+			100%{ box-shadow: 10px 10px 5px #333;}
+		}
+/* 		.down i,.bagtxt i{
+			margin: 100px auto;
+			padding-top: 10px;
+			display: block;
+			width: 50px;
+			height: 50px;
+			border-radius: 50%;
+			background: #fff;
+			border-color:rgb(150,100,79);
+		} */
+/* 		.down i i,.bagtxt i i{
+			display: block;
+			width: 20px;
+			height: 20px;
+			border-radius: 50%;
+			background: #000;
+		} */
+		.baghead:hover{
+			transform: rotateX(180deg);
+			transition:all 2s;
+		}
+	</style>
 </head>
-<body>
-	<h1>hello world</h1>
+<body scroll="no">
+	<div class="bg"></div>
+	<h1>段骁桐,1326,前端</h1>
+	<div class="anima">
+		<div class="bagbody">
+			<div class="baghead">
+				<div class="top"></div>
+				<div class="down">
+					<i><i></i></i>
+				</div>
+			</div>
+			<div></div>
+			<div class="bagtxt"><p><b>档</b><i><i></i></i><b>案</b></p></div>
+		</div>
+	</div>
+	<div class="wrap">
+		
+	</div>
 </body>
 </html>
