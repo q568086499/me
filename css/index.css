@@ -1,5 +1,6 @@
 @charset "utf-8";
 h1{display: none;}
+/*档案袋动画*/
 .bg{
 	position: fixed;
 	z-index: -1;
@@ -9,4 +10,130 @@ h1{display: none;}
 	background-image:url("../img/pagebg.jpg");
 	background-size:cover;
 	background-repeat: no-repeat;
+}
+.bagbody{
+	margin-left: -600px;
+	left: 50%;
+	bottom: 0;
+	position: absolute;
+	width: 1200px;
+	height: 600px;
+    background: url('../img/bagbg.png') repeat;
+    box-shadow: 10px 10px 5px #333;
+}
+.flip{
+	transform: rotateY(180deg);
+	transition:all 2s;
+}
+.bagtxt{
+	margin-top: 100px;
+}
+.bagtxt p{
+	margin-left: 300px;
+	font-size: 98px;
+	font-family: "Microsoft Yahei";
+	color: rgb(255,22,22);
+}
+.bagtxt b:last-child{
+	float: right;
+	margin-right: 300px;
+}
+.baghead{
+	margin-top: -200px;
+}
+.top{
+	width: 100%;
+	height: 200px;
+}
+.down{
+	width: 100%;
+	height: 200px;
+	background: url('../img/bagbg.png') repeat;
+	border-top: 1px solid rgb(150,100,79);
+	border-bottom: 1px solid rgb(150,100,79);
+}
+@keyframes anima{
+	0%{ box-shadow: 0 0 10px 10px #333;}
+	50%{ box-shadow: none;}
+	100%{ box-shadow: 0 0 10px 10px #333;}
+}
+.circle{
+	margin: 60px auto;
+	display: block;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	background: rgb(150,100,79);
+    border:20px solid #fff;
+} 
+.line,.moveline{
+	position: absolute;   
+    display: block;
+    width: 50px;
+}
+.line{
+	top: 108px;
+    left: 573px;
+    height: 241px;
+    border-right: 2px solid #fff;
+    border-left: 2px solid #fff;
+}
+.moveline{
+    height: 50px;
+    top: 322px;
+    left: 575px;
+    transition: all 2s;
+}
+.rotate{
+    transform: rotate(-720deg);
+}
+.moveline:before{
+	margin-left: 50px;
+	content: "";
+	display: block;
+	width: 2px;
+	height: 160px;
+	background: #fff;
+}
+.bagopen{
+	transform: rotateX(180deg);
+	transition:all 2s;
+}
+/*“拆”的按钮*/ 
+.takebtn{
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	margin-top: -50px;
+	margin-left: -150px;
+	width: 300px;
+	height: 100px;
+	font-size: 72px;
+	text-align: center;
+	line-height: 100px;
+	color: rgb(255,231,24);
+	background:rgb(212, 75, 40);
+	border-radius: 10px;
+	box-shadow: 0 0 10px 10px rgba(0,0,0,.8);
+	cursor: pointer;
+}
+.fadeInUp{
+	animation:fadeInUp 1s infinite;
+}
+.flash{
+	animation:anima 1s infinite;
+}
+@keyframes fadeInUp{
+	0% {
+	    opacity: 0;
+	    -webkit-transform: translateY(20px);
+	    -ms-transform: translateY(20px);
+	    transform: translateY(20px);
+	}
+	100% {
+	    opacity: 1;
+	    -webkit-transform: translateY(0);
+	    -ms-transform: translateY(0);
+	    transform: translateY(0);
+	}
 }

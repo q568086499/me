@@ -14,3 +14,4 @@ a {color: #333; text-decoration:none; outline: 0;}
 a:visited {text-decoration:none;}
 a:hover {color:#e51b46; text-decoration:none;}
 a:active {color:#e51b46;}
+.none{display: none;}
