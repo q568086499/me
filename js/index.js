@@ -35,12 +35,27 @@ function todo(){
 				setTimeout(()=>{
 					document.getElementsByClassName("moveline")[0].setAttribute("class","moveline rotate");
 				},1000);
+				$baghead.setAttribute("class","baghead bagopen");
 				setTimeout(()=>{
 					document.getElementsByClassName("moveline")[0].remove();
 					document.getElementsByClassName("line")[0].remove();
-					$baghead.setAttribute("class","baghead bagopen");
 				},3000);
-				
+				setTimeout(()=>{
+					const wrap = document.getElementsByClassName("wrap")[0];
+					let h = 0; 
+					$bagbody.setAttribute("class","bagbody");
+					const x = setInterval(()=>{
+						if(h<599){
+							h++;
+							wrap.style.height = h+"px";
+							$bagbody.style.bottom = "-"+h+"px";
+						}else{
+							clearInterval(x);
+							document.getElementsByClassName("anima")[0].remove();
+						}
+					},3);
+					wrap.style.opacity=1;
+				},4000);
 			});
 		},1000);
 	},1000);
