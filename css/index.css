@@ -1,5 +1,8 @@
 @charset "utf-8";
 h1{display: none;}
+body{width: 1304px;
+    height: 702px;
+    overflow: hidden;}
 /*档案袋动画*/
 .bg{
 	position: fixed;
@@ -21,6 +24,7 @@ h1{display: none;}
     background: url('../img/bagbg.png') repeat;
     box-shadow: 10px 10px 5px #333;
 }
+.bagshadow{box-shadow: -10px 10px 5px #333;}
 .flip{
 	transform: rotateY(180deg);
 	transition:all 2s;
@@ -125,14 +129,10 @@ h1{display: none;}
 @keyframes fadeInUp{
 	0% {
 	    opacity: 0;
-	    -webkit-transform: translateY(20px);
-	    -ms-transform: translateY(20px);
 	    transform: translateY(20px);
 	}
 	100% {
 	    opacity: 1;
-	    -webkit-transform: translateY(0);
-	    -ms-transform: translateY(0);
 	    transform: translateY(0);
 	}
 }
@@ -147,9 +147,95 @@ h1{display: none;}
 	position: absolute;
 	width: 1100px;
 	height: 1px;
-    background: #ddd;
-    box-shadow: 10px 0 5px #333;
     opacity: 0;
 }
+.overflow{overflow: hidden;}
+/* page*/
+.page{
+	position: absolute;
+	padding:20px;
+	margin-top: 34px;
+	height: 599px;
+	width: 1100px;
+	background: #fff;
+    box-sizing: border-box;
+    z-index: 5;
+}
+.page:before{
+    display: block;
+    position: absolute;
+    top: -34px;
+    left: 0;
+    content: "";
+    height: 34px;
+    width: 1100px;
+    background: url(../img/pagehead.png) repeat-x;
+}
+/*nav*/
+nav{
+	position: absolute;
+	top: 30px;
+	left: 1100px;
+}
+nav ul li{
+	margin-top: 4px;
+	height: 40px;
+	width: 40px;
+	line-height: 40px;
+	text-align: center;
+	cursor: pointer;
+	transition:all .5s;
+	overflow: hidden;
+	font-size: 20px;
+}
+nav ul li:hover{
+	width: 100px;
+	transition:all .5s;
+}
+nav ul li:hover i{
+	display: none;
+}
+nav ul li:nth-child(1){
+	background: rgb(167,207,88);
+}
+nav ul li:nth-child(2){
+	background: rgb(111,196,203);
+}
+nav ul li:nth-child(3){
+	background: rgb(208,228,229);
+}
+nav ul li:nth-child(4){
+	background: rgb(253,240,1);
+}
+nav ul li i{
+	display: block;
+	width: 40px;
+	height: 40px;
+}
+nav ul li:nth-child(1) i{
+	background: url(../img/icon.png) -40px;
+}
+nav ul li:nth-child(2) i{
+	background: url(../img/icon.png);
+}
+nav ul li:nth-child(3) i{
+	background: url(../img/icon.png) 40px;
+}
+nav ul li:nth-child(4) i{
+	background: url(../img/icon.png) -80px;
+}
 
-
+/*页面切换*/
+.page0{background:rgb(167,207,88);}
+.page1{background:rgb(111,196,203);}
+.page2{background:rgb(208,228,229);}
+.page3{background:rgb(253,240,1);}
+.table{
+	animation:pagetable 2s infinite;
+}
+@keyframes pagetable{
+	30%{left: 0;transform: scale(1.1,1.1);z-index: 10;}
+	50%{left:-1100px;}
+	70%{transform: scale(1,1);z-index:6;}
+	100%{left:0px;}
+}
