@@ -239,3 +239,30 @@ nav ul li:nth-child(4) i{
 	70%{transform: scale(1,1);z-index:6;}
 	100%{left:0px;}
 }
+
+/*page1*/
+.left,.right{float: left;}
+.left{width: 40%}
+.right{width: 60%}
+.border{
+	margin-top:30px;
+	margin-left: 100px;
+	transform:rotateZ(-15deg);
+	display: inline-block;
+    width: 180px;
+    height: 180px;
+    border: 15px solid transparent;
+    border-image: url(../img/photobg.png) 10 round;
+}
+#me{position: absolute;}
+.page0 .border:after{
+	content: "朋友告诉我放我自己照片会扣很多分所以暂时藏起来了,如果你够仔细还是能找到的,悲伤脸";
+	display: block;
+	margin-top:20px;
+	text-indent: 24px;
+}
+.box{width: 180px;height: 180px;background: url('../img/me.png'); cursor:help;}	
+.info{margin-top: 20px;}
+.info h2,.info p{display: inline-block;}
+.info h2{text-indent: 24px;font-weight: 700;font-size: 18px;}
+.info p{font-size: 16px;}
