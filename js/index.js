@@ -97,5 +97,7 @@ $nav.addEventListener("click",function(e){
 	}
 })
 
-
+function liketoggle(){
+	alert("这要加一轮播")
+}
 

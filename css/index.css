@@ -243,7 +243,7 @@ nav ul li:nth-child(4) i{
 /*page1*/
 .left,.right{float: left;}
 .left{width: 40%}
-.right{width: 60%}
+.right{width: 60%;}
 .border{
 	margin-top:30px;
 	margin-left: 100px;
@@ -261,8 +261,111 @@ nav ul li:nth-child(4) i{
 	margin-top:20px;
 	text-indent: 24px;
 }
-.box{width: 180px;height: 180px;background: url('../img/me.png'); cursor:help;}	
+.box{width: 180px;height: 180px;background: url('../img/me1.png'); cursor:help;}	
 .info{margin-top: 20px;}
 .info h2,.info p{display: inline-block;}
 .info h2{text-indent: 24px;font-weight: 700;font-size: 18px;}
-.info p{font-size: 16px;}
+.info p{text-indent: 32px;font-size: 16px;}
+.ultit{
+	float: left;
+	padding: 20px;
+	font-size: 40px;
+}
+.ultit i{ text-decoration: line-through; }
+.ultit:after{
+	content: "简史";
+	display: block;
+    margin-top: -20px;
+    margin-left: 160px;
+}
+.list{
+	margin:0 auto;
+	padding:20px;
+	position: relative;
+}
+.list li{
+	position: absolute;
+	padding: 30px;
+	width: 150px;
+	height:150px;
+	font-size: 15px;
+	color: #0ff;
+	text-align: center;
+	border-radius: 50%;
+}
+.list li p i{
+	display: block;
+	font-size: 40px;
+}
+.list li p {
+	text-shadow: 1px 1px 1px rgba(255,255,255,.6);
+}
+.list li:nth-child(1){
+	top: 20px;
+	left: 380px;
+	color: #4c9582;
+	border: 6px solid #539e89; 
+	background: #51c9a6;
+}
+.list li:nth-child(2){
+	top: 100px;
+	left: 260px;
+	color: #bd607d;
+	border: 6px solid #e29ab0;
+	background: #e77b9d;
+}
+.list li:nth-child(3){
+	top: 180px;
+	left: 130px;
+	color: #5e9fb5;
+	border: 6px solid #a0d0de;
+	background: #7ecae4;
+}
+.list li:nth-child(4){
+	top: 260px;
+	color: #ba9d5b;
+	border: 6px solid #ddc899;
+	background: #f0cd79;
+}
+.list li:hover{
+	z-index: 2;
+	transform: scale(1.1);
+	transition:all 0.6s;
+}
+.list li:hover p{
+	animation:hover 1s;
+}
+.list li:hover:nth-child(1){
+	color:#0f775c;
+	border:6px solid #098563;
+	background:#00c18c;
+}
+.list li:hover:nth-child(2){
+	color:#b22b56;
+	border:6px solid #bb345d;
+	background:#ea5180;
+}
+.list li:hover:nth-child(3){
+	color:#2784a3;
+	border:6px solid #4397b3;
+	background:#55c1e5;
+}
+.list li:hover:nth-child(4){
+	color:#ab8228;
+	border:6px solid #b38e3e;
+	background:#f8c64d;
+}
+@keyframes hover{
+	0%{
+		opacity: 1;
+		transform:translateY(0);
+	}
+	50%{
+		opacity: 0;
+		transform:translateY(200px);
+	}
+	100%{
+		opacity: 1;
+		transform:translateY(0);
+	}
+}
