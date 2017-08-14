@@ -10,7 +10,7 @@ img{vertical-align:top;border:0;}
 h1,h2,h3,h4,h5,h6{font-size:inherit; font-weight:normal;}
 address,cite,code,em,th,i{font-weight:normal; font-style:normal;}
 .hx a,.hx em,.fB{font-weight:bold;}
-a {color: #333; text-decoration:none; outline: 0;}
+a {color: #00f; text-decoration:none; outline: 0;}
 a:visited {text-decoration:none;}
 a:hover {color:#e51b46; text-decoration:none;}
 a:active {color:#e51b46;}

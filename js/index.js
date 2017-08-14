@@ -101,3 +101,34 @@ function liketoggle(){
 	alert("这要加一轮播")
 }
 
+// page2 skill
+const skillbox = document.getElementsByClassName("skill")[0];
+skillbox.addEventListener("mouseover",function(e){
+	const target = e.target;
+	if(target.nodeName=="IMG"){
+		const skillbtn = skillbox.children;
+		const $select = skillbtn[target.id];
+		$select.children[1].setAttribute("class","bounceOut");
+		for(let i=0;i<skillbtn.length;i++){
+			skillbtn[i].children[2].style.display = "none";
+			skillbtn[i].children[1].style.display = "inline-block";
+		}
+		setTimeout(()=>{
+			$select.children[2].style.display = "block";
+			$select.children[1].setAttribute("class","");
+			$select.children[1].style.display = "none";
+		},900);
+	}
+});
+
+function WeChat(){
+	let x = document.createElement("div");
+	x.innerHTML = `
+		<img class="WeChat" src="img/WeChat.png">拆开看看</div>
+	` ;
+	let w = window.innerWidth,
+        h = window.innerHeight;
+    x.style.cssText = "width:"+w+"px;height:"+h+"px;position:fixed;top:0;left:0;z-index:998;background:rgba(0,0,0,.4)";
+	document.body.appendChild(x);
+	x.onclick = function(){this.remove()}
+}
