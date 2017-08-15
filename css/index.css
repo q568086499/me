@@ -264,6 +264,7 @@ nav ul li:nth-child(4) i{
 	margin-top:2rem;
 	text-indent: 24px;
 }
+#cas{width: 18rem;height: 18rem}
 .page0 .right img{position: absolute;bottom: 4rem;z-index: -1;width: 29rem;height: 30rem}
 .box{width: 18rem;height: 18rem;background: url('../img/me.png'); cursor:help;}	
 .info{margin-top: 2rem;}
