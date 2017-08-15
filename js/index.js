@@ -4,7 +4,7 @@ const $bagbody = document.getElementsByClassName("bagbody")[0],
 	  $baghead = document.getElementsByClassName("baghead")[0],
 	  $down = document.getElementsByClassName("down")[0],
 	  wrap = document.getElementsByClassName("wrap")[0];
-$body.addEventListener("mouseover",todo);
+// $body.addEventListener("mouseover",todo);
 function todo(){
 	$body.removeEventListener("mouseover",todo);
 	setTimeout(()=>{
@@ -85,7 +85,7 @@ $nav.addEventListener("click",function(e){
 				}
 				pi.style.zIndex = 8;
 			}
-			p[x].setAttribute("class","page"+x+" page table");
+			p[x].setAttribute("class","page"+x+" page tab");
 			setTimeout(()=>{
 				p[x].style.zIndex=6;
 				pi.style.zIndex = 9;
@@ -131,4 +131,12 @@ function WeChat(){
     x.style.cssText = "width:"+w+"px;height:"+h+"px;position:fixed;top:0;left:0;z-index:998;background:rgba(0,0,0,.4)";
 	document.body.appendChild(x);
 	x.onclick = function(){this.remove()}
+}
+
+
+//分享
+document.getElementsByClassName("baidu")[0].onclick=function(){
+	const x = document.getElementsByClassName("bdsharebuttonbox")[0];
+	x.style.display == "none"?x.style.display = "block":x.style.display = "none";
+	console.log(x.style.display == "none")
 }
