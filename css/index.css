@@ -261,6 +261,7 @@ nav ul li:nth-child(4) i{
 	margin-top:20px;
 	text-indent: 24px;
 }
+.page0 .right img{position: absolute;bottom: 40px;z-index: -1;}
 .box{width: 180px;height: 180px;background: url('../img/me.png'); cursor:help;}	
 .info{margin-top: 20px;}
 .info h2,.info p{display: inline-block;}
@@ -433,10 +434,11 @@ nav ul li:nth-child(4) i{
 
 
 /*page 4*/
-.table{ float: left; width: 840px;height: 500px;overflow-y: scroll;background: #eee;}
-.table::-webkit-scrollbar{width:4px;}
-.table::-webkit-scrollbar-track{background-color:rgb(253,240,99);}
-.table::-webkit-scrollbar-thumb{background-color:rgb(200,0,0);;}
+.tablebox{ float: left; width: 840px;height: 500px;overflow-y: scroll;}
+.tablebox::-webkit-scrollbar{width:4px;}
+.tablebox::-webkit-scrollbar-track{background-color:rgb(253,240,99);}
+.tablebox::-webkit-scrollbar-thumb{background-color:rgb(200,0,0);;}
+.table{width: 836px;height: 1178px;background: #eee;}
 .bn{border-top:none!important;}
 .br{border-right:1px solid #333;}
 .bd{border-bottom:1px solid #333;}
@@ -462,5 +464,24 @@ nav ul li:nth-child(4) i{
 .bdsharebuttonbox{
 	position: absolute;
 	top: 150px;
-	right: 64px;
+	right: 80px;
 }
+
+
+
+/*message*/
+.msg{
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	margin-top: -50px;
+	margin-left: -150px;
+	padding-top: 30px;
+	width: 300px;
+	height: 100px;
+	font-size: 24px;
+	text-align: center;
+	background: #eee;
+	color: #333;
+	border-radius: 20px;
+} 

@@ -4,7 +4,25 @@ const $bagbody = document.getElementsByClassName("bagbody")[0],
 	  $baghead = document.getElementsByClassName("baghead")[0],
 	  $down = document.getElementsByClassName("down")[0],
 	  wrap = document.getElementsByClassName("wrap")[0];
-// $body.addEventListener("mouseover",todo);
+if (localStorage.pagecount){
+	localStorage.pagecount=Number(localStorage.pagecount) +1;
+	document.getElementsByClassName("anima")[0].remove();
+	wrap.setAttribute("class","wrap");
+	wrap.style.height ="600px";
+	wrap.style.opacity=1;
+	let x = document.createElement("div");
+	x.innerHTML = `
+		<div class="msg">这是您第${localStorage.pagecount}次来了<br>烂动画我就跳过了</div>
+	` ;
+	let w = window.innerWidth,
+        h = window.innerHeight;
+    x.style.cssText = "width:"+w+"px;height:"+h+"px;position:fixed;top:0;left:0;z-index:998;background:rgba(0,0,0,.4)";
+	document.body.appendChild(x);
+	x.onclick = function(){this.remove()}
+}else{
+	localStorage.pagecount=1;
+	$body.addEventListener("mouseover",todo);
+}
 function todo(){
 	$body.removeEventListener("mouseover",todo);
 	setTimeout(()=>{
@@ -97,10 +115,6 @@ $nav.addEventListener("click",function(e){
 	}
 })
 
-function liketoggle(){
-	alert("这要加一轮播")
-}
-
 // page2 skill
 const skillbox = document.getElementsByClassName("skill")[0];
 skillbox.addEventListener("mouseover",function(e){
@@ -124,7 +138,7 @@ skillbox.addEventListener("mouseover",function(e){
 function WeChat(){
 	let x = document.createElement("div");
 	x.innerHTML = `
-		<img class="WeChat" src="img/WeChat.png">拆开看看</div>
+		<img class="WeChat" src="img/WeChat.png">
 	` ;
 	let w = window.innerWidth,
         h = window.innerHeight;
