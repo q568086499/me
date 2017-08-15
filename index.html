@@ -31,7 +31,7 @@
 			<div class="left">
 				<div class="border">
 					<div class="box" id="bb">
-						<canvas id="cas" width="180px" height="180px"></canvas>
+						<canvas id="cas" width="18rem" height="18rem"></canvas>
 					</div>
 				</div>
 				<div class="info">
@@ -287,9 +287,22 @@
 			</ul>
 		</nav>
 	</div>
+
 	<script src="js/index.js"></script>
 	<script src="js/canvas.js"></script>
-	<script>
+	<script>    
+        (function (doc, win) {    
+            var docEl = doc.documentElement,    
+            resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',    
+            recalc = function () {    
+            var clientWidth = docEl.clientWidth;    
+            if (!clientWidth) return;    
+            docEl.style.fontSize = 10 * (clientWidth / 1304) + 'px';    
+        };    
+        if (!doc.addEventListener) return;    
+        win.addEventListener(resizeEvt, recalc, false);    
+        doc.addEventListener('DOMContentLoaded', recalc, false);    
+        })(document, window); 
 		window._bd_share_config={
 			"common":{"bdSnsKey":{},
 			"bdText":"前端段骁桐","bdMini":"2","bdMiniList":["tsina","bdysc","weixin","tqq","sqq","mail","copy","print"],"bdPic":"","bdStyle":"1","bdSize":"24"},

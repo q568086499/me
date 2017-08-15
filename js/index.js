@@ -8,7 +8,7 @@ if (localStorage.pagecount){
 	localStorage.pagecount=Number(localStorage.pagecount) +1;
 	document.getElementsByClassName("anima")[0].remove();
 	wrap.setAttribute("class","wrap");
-	wrap.style.height ="600px";
+	wrap.style.height ="60rem";
 	wrap.style.opacity=1;
 	let x = document.createElement("div");
 	x.innerHTML = `
@@ -62,10 +62,10 @@ function todo(){
 					let h = 0; 
 					$bagbody.setAttribute("class","bagbody bagshadow");
 					const x = setInterval(()=>{
-						if(h<599){
+						if(h<59){
 							h++;
-							wrap.style.height = h+"px";
-							$bagbody.style.bottom = "-"+h+"px";
+							wrap.style.height = h+"rem";
+							$bagbody.style.bottom = "-"+h+"rem";
 						}else{
 							clearInterval(x);
 							document.getElementsByClassName("anima")[0].remove();
