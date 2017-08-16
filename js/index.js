@@ -150,7 +150,7 @@ function WeChat(){
 
 //分享
 document.getElementsByClassName("baidu")[0].onclick=function(){
-	var script=document.createElement('script');
+	var script=document.createElement('script'),baidukey = false;
 	script.type='text/javascript';
 	script.async='async';
 	script.src="http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)";
@@ -158,6 +158,10 @@ document.getElementsByClassName("baidu")[0].onclick=function(){
 	script.onload=function(){
 		const x = document.getElementsByClassName("bdsharebuttonbox")[0];
 		x.style.display == "none"?x.style.display = "block":x.style.display = "none";
+		baidukey = true;
 	}
-	script.onerror=function(){alert("由于网络协议原因插件未能正确加载，请允许加载后重试。");}
+	setTimeout(()=>{
+		if(!baidukey)alert("由于网络协议原因插件未能正确加载，请允许加载后重试。");
+	},1000);
+
 }
