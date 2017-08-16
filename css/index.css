@@ -167,10 +167,10 @@ body{width: 130.4rem;
 .page:before{
     display: block;
     position: absolute;
-    top: -3.4rem;
+    top: -34px;
     left: 0;
     content: "";
-    height: 3.4rem;
+    height: 6rem;
     width: 110rem;
     background: url(../img/pagehead.png) repeat-x;
 }
@@ -216,16 +216,23 @@ nav ul li i{
 	height: 4rem;
 }
 nav ul li:nth-child(1) i{
-	background: url(../img/icon.png) -40px;
+	background: url(../img/icon.png);
+	background-size: 393% auto;
+    background-position: 33% 0;
 }
 nav ul li:nth-child(2) i{
 	background: url(../img/icon.png);
+	background-size: 393% auto;
 }
 nav ul li:nth-child(3) i{
-	background: url(../img/icon.png) 40px;
+	background: url(../img/icon.png);
+	background-size: 393% auto;
+    background-position: 100% 0;
 }
 nav ul li:nth-child(4) i{
-	background: url(../img/icon.png) -80px;
+	background: url(../img/icon.png);
+	background-size: 393% auto;
+    background-position: 67% 0;
 }
 
 /*页面切换*/
@@ -266,7 +273,7 @@ nav ul li:nth-child(4) i{
 }
 #cas{width: 18rem;height: 18rem}
 .page0 .right img{position: absolute;bottom: 4rem;z-index: -1;width: 29rem;height: 30rem}
-.box{width: 18rem;height: 18rem;background: url('../img/me.png'); cursor:help;}	
+.box{width: 18rem;height: 18rem;background: url('../img/me.png') no-repeat;background-size: 100%; cursor:help;}	
 .info{margin-top: 2rem;}
 .info h2,.info p{display: inline-block;}
 .info h2{text-indent: 2.4rem;font-weight: 700;font-size: 1.8rem;}

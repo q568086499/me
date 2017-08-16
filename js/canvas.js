@@ -4,8 +4,8 @@ var canvas = document.getElementById("cas"), ctx = canvas.getContext("2d");
 	canvas.width = canvasBox.clientWidth;
 	canvas.height = canvasBox.clientHeight;
 	var img = new Image();
-	img.src = "../git/img/26.png";
-	// img.src = "../me/img/26.png";
+	// img.src = "../git/img/26.png";
+	img.src = "../me/img/26.png";
 	img.onload = function () {
 		var w = canvas.height*img.width/img.height;
 		ctx.drawImage(img, (canvas.width-w)/2, 0, w, canvas.height);
