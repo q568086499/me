@@ -152,5 +152,4 @@ function WeChat(){
 document.getElementsByClassName("baidu")[0].onclick=function(){
 	const x = document.getElementsByClassName("bdsharebuttonbox")[0];
 	x.style.display == "none"?x.style.display = "block":x.style.display = "none";
-	console.log(x.style.display == "none")
 }
