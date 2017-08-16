@@ -9,11 +9,13 @@ var canvas = document.getElementById("cas"), ctx = canvas.getContext("2d");
 	img.onload = function () {
 		var w = canvas.height*img.width/img.height;
 		ctx.drawImage(img, (canvas.width-w)/2, 0, w, canvas.height);
-		tapClip()
+		tapClip();
+		canvasBox.style.backgroundImage = "url('../me/img/me.png')";
 	};
 	function getClipArea(e){
 		var x = e.clientX;
 		var y = e.clientY;
+		console.log(x,y)
 		var ndom = canvas;
 		while(ndom.tagName!=="BODY"){
 			x -= ndom.offsetLeft;

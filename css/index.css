@@ -273,7 +273,7 @@ nav ul li:nth-child(4) i{
 }
 #cas{width: 18rem;height: 18rem}
 .page0 .right img{position: absolute;bottom: 4rem;z-index: -1;width: 29rem;height: 30rem}
-.box{width: 18rem;height: 18rem;background: url('../img/me.png') no-repeat;background-size: 100%; cursor:help;}	
+.box{width: 18rem;height: 18rem;background-repeat:no-repeat;background-size: 100%; cursor:help;}	
 .info{margin-top: 2rem;}
 .info h2,.info p{display: inline-block;}
 .info h2{text-indent: 2.4rem;font-weight: 700;font-size: 1.8rem;}
