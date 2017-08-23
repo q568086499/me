@@ -1,4 +1,5 @@
 //页面初始化
+"use strict";
 const $body = document.body;
 const $bagbody = document.getElementsByClassName("bagbody")[0],
 	  $baghead = document.getElementsByClassName("baghead")[0],
