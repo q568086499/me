@@ -28,7 +28,14 @@ body{width: 130.4rem;
 .bagshadow{box-shadow: -10px 10px 5px #333;}
 .flip{
 	transform: rotateY(180deg);
+	-ms-transform:rotateY(180deg); 	/* IE 9 */
+	-moz-transform:rotateY(180deg); 	/* Firefox */
+	-webkit-transform:rotateY(180deg); /* Safari 和 Chrome */
+	-o-transform:rotateY(180deg); 
 	transition:all 2s;
+	-moz-transition: all 2s; /* Firefox 4 */
+	-webkit-transition: all 2s; /* Safari 和 Chrome */
+	-o-transition: all 2s; 
 }
 .bagtxt{
 	margin-top: 10rem;
@@ -89,10 +96,17 @@ body{width: 130.4rem;
     height: 5rem;
     top: 32.2rem;
     left: 57.5rem;
-    transition: all 2s;
+	transition:all 2s;
+	-moz-transition: all 2s; /* Firefox 4 */
+	-webkit-transition: all 2s; /* Safari 和 Chrome */
+	-o-transition: all 2s; 
 }
 .rotate{
     transform: rotate(-720deg);
+    -ms-transform: rotate(-720deg); 	/* IE 9 */
+	-moz-transform: rotate(-720deg); 	/* Firefox */
+	-webkit-transform: rotate(-720deg); /* Safari 和 Chrome */
+	-o-transform: rotate(-720deg); 
 }
 .moveline:before{
 	margin-left: 5rem;
@@ -104,8 +118,18 @@ body{width: 130.4rem;
 }
 .bagopen{
 	transform: rotateX(180deg);
+	-ms-transform: rotateX(180deg); 	/* IE 9 */
+	-moz-transform: rotateX(180deg); 	/* Firefox */
+	-webkit-transform: rotateX(180deg); /* Safari 和 Chrome */
+	-o-transform: rotateX(180deg); 
 	transition:all 2s;
+	-moz-transition: all 2s; /* Firefox 4 */
+	-webkit-transition: all 2s; /* Safari 和 Chrome */
+	-o-transition: all 2s; 
 	transition-delay: 3s;
+	-moz-transition-delay: 3s; /* Firefox 4 */
+	-webkit-transition-delay: 3s; /* Safari 和 Chrome */
+	-o-transition-delay: 3s; /* Opera */
 }
 /*“拆”的按钮*/ 
 .takebtn{
@@ -125,16 +149,24 @@ body{width: 130.4rem;
 	box-shadow: 0 0 10px 10px rgba(0,0,0,.8);
 	cursor: pointer;
 }
-.fadeInUp{animation:fadeInUp 1s infinite;}
-.flash{animation:anima 1s infinite;}
+.fadeInUp{animation:fadeInUp 1s infinite;-webkit-animation:fadeInUp 1s infinite; /* Safari 和 Chrome */}
+.flash{animation:anima 1s infinite;-webkit-animation:anima 1s infinite;}
 @keyframes fadeInUp{
 	0% {
 	    opacity: 0;
 	    transform: translateY(2rem);
+	    -ms-transform: translateY(2rem); 	/* IE 9 */
+		-moz-transform: translateY(2rem); 	/* Firefox */
+		-webkit-transform: translateY(2rem); /* Safari 和 Chrome */
+		-o-transform: translateY(2rem); 
 	}
 	100% {
 	    opacity: 1;
 	    transform: translateY(0);
+	    -ms-transform: translateY(0); 	/* IE 9 */
+		-moz-transform: translateY(0); 	/* Firefox */
+		-webkit-transform: translateY(0); /* Safari 和 Chrome */
+		-o-transform: translateY(0); 
 	}
 }
 
@@ -188,12 +220,18 @@ nav ul li{
 	text-align: center;
 	cursor: pointer;
 	transition:all .5s;
+	-moz-transition: all .5s; /* Firefox 4 */
+	-webkit-transition: all .5s; /* Safari 和 Chrome */
+	-o-transition: all .5s; 
 	overflow: hidden;
 	font-size: 2rem;
 }
 nav ul li:hover{
 	width: 10rem;
 	transition:all .5s;
+	-moz-transition: all .5s; /* Firefox 4 */
+	-webkit-transition: all .5s; /* Safari 和 Chrome */
+	-o-transition: all .5s; 
 }
 nav ul li:hover i{
 	display: none;
@@ -241,12 +279,27 @@ nav ul li:nth-child(4) i{
 .page2{background:rgb(208,228,229);}
 .page3{background:rgb(253,240,1);}
 .tab{
-	animation:pagetable 2s infinite;
+	animation:pagetable 2s infinite;-webkit-animation:pagetable 2s infinite;
 }
 @keyframes pagetable{
-	30%{left: 0;transform: scale(1.1,1.1);z-index: 10;}
+	30%{
+		left: 0;
+		transform: scale(1.1,1.1);
+		-ms-transform: scale(1.1,1.1); 	/* IE 9 */
+		-moz-transform: scale(1.1,1.1); 	/* Firefox */
+		-webkit-transform: scale(1.1,1.1); /* Safari 和 Chrome */
+		-o-transform: scale(1.1,1.1); 
+		z-index: 10;
+	}
 	50%{left:-110rem;}
-	70%{transform: scale(1,1);z-index:6;}
+	70%{
+		transform: scale(1,1);
+		-ms-transform: scale(1,1); 	/* IE 9 */
+		-moz-transform: scale(1,1); 	/* Firefox */
+		-webkit-transform: scale(1,1); /* Safari 和 Chrome */
+		-o-transform: scale(1,1); 
+		z-index:6;
+	}
 	100%{left:0px;}
 }
 
@@ -258,6 +311,10 @@ nav ul li:nth-child(4) i{
 	margin-top:3rem;
 	margin-left: 10rem;
 	transform:rotateZ(-15deg);
+	-ms-transform: rotateZ(-15deg); 	/* IE 9 */
+	-moz-transform: rotateZ(-15deg); 	/* Firefox */
+	-webkit-transform: rotateZ(-15deg); /* Safari 和 Chrome */
+	-o-transform: rotateZ(-15deg); 
 	display: inline-block;
     width: 18rem;
     height: 18rem;
@@ -342,10 +399,17 @@ nav ul li:nth-child(4) i{
 .list li:hover{
 	z-index: 2;
 	transform: scale(1.1);
+	-ms-transform:scale(1.1);	/* IE 9 */
+	-moz-transform:scale(1.1);	/* Firefox */
+	-webkit-transform:scale(1.1);/* Safari 和 Chrome */
+	-o-transform:scale(1.1);
 	transition:all 0.6s;
+	-moz-transition: all .6s; /* Firefox 4 */
+	-webkit-transition: all .6s; /* Safari 和 Chrome */
+	-o-transition: all .6s; 
 }
 .list li:hover p{
-	animation:hover 1s;
+	animation:hover 1s;-webkit-animation:hover 1s;
 }
 .list li:hover:nth-child(1){
 	color:#0f775c;
@@ -371,14 +435,26 @@ nav ul li:nth-child(4) i{
 	0%{
 		opacity: 1;
 		transform:translateY(0);
+		-ms-transform:translateY(0);	/* IE 9 */
+		-moz-transform:translateY(0);	/* Firefox */
+		-webkit-transform:translateY(0);/* Safari 和 Chrome */
+		-o-transform:translateY(0);
 	}
 	50%{
 		opacity: 0;
 		transform:translateY(20rem);
+		-ms-transform:translateY(20rem);	/* IE 9 */
+		-moz-transform:translateY(20rem);	/* Firefox */
+		-webkit-transform:translateY(20rem);/* Safari 和 Chrome */
+		-o-transform:translateY(20rem);
 	}
 	100%{
 		opacity: 1;
 		transform:translateY(0);
+		-ms-transform:translateY(0);	/* IE 9 */
+		-moz-transform:translateY(0);	/* Firefox */
+		-webkit-transform:translateY(0);/* Safari 和 Chrome */
+		-o-transform:translateY(0);
 	}
 }
 
@@ -404,18 +480,28 @@ nav ul li:nth-child(4) i{
 .bounceOut{animation: bounceOut 1s infinite;}
 @keyframes bounceOut{
 	20% {
-	    -webkit-transform: scale3d(.9,.9,.9);
 	    transform: scale3d(.9,.9,.9);
+	    -ms-transform:scale3d(.9,.9,.9);	/* IE 9 */
+		-moz-transform:scale3d(.9,.9,.9);	/* Firefox */
+		-webkit-transform:scale3d(.9,.9,.9);/* Safari 和 Chrome */
+		-o-transform:scale3d(.9,.9,.9);
 	}
 	50%, 55% {
 	    opacity: 1;
-	    -webkit-transform: scale3d(1.1,1.1,1.1);
 	    transform: scale3d(1.1,1.1,1.1);
+	    -ms-transform:scale3d(1.1,1.1,1.1);	/* IE 9 */
+		-moz-transform:scale3d(1.1,1.1,1.1);	/* Firefox */
+		-webkit-transform:scale3d(1.1,1.1,1.1);/* Safari 和 Chrome */
+		-o-transform:scale3d(1.1,1.1,1.1);
 	}
 	100% {
 	    opacity: 0;
-	    -webkit-transform: scale3d(.3,.3,.3);
 	    transform: scale3d(.3,.3,.3);
+	    -ms-transform:scale3d(.3,.3,.3);	/* IE 9 */
+		-moz-transform:scale3d(.3,.3,.3);	/* Firefox */
+		-webkit-transform:scale3d(.3,.3,.3);/* Safari 和 Chrome */
+		-o-transform:scale3d(.3,.3,.3);
+
 	}
 }
 
@@ -424,6 +510,10 @@ nav ul li:nth-child(4) i{
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+	-ms-transform:translate(-50%, -50%);	/* IE 9 */
+	-moz-transform:translate(-50%, -50%);	/* Firefox */
+	-webkit-transform:translate(-50%, -50%);/* Safari 和 Chrome */
+	-o-transform:translate(-50%, -50%);
 }
 
 
